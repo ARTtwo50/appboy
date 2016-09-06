@@ -1,7 +1,7 @@
 module Appboy
   module REST
     class TriggeredDeliveries < Base
-      attr_reader :app_group_id, :campaign_id, :trigger_properties, :recipients
+      attr_reader :app_group_id, :campaign_id, :trigger_properties, :recipient
 
       def initialize(app_group_id, campaign_id:, trigger_properties:, recipient: {})
         @app_group_id = app_group_id
@@ -17,6 +17,7 @@ module Appboy
           trigger_properties: trigger_properties,
           recipients:         [recipient]
         }
+
       end
     end
   end
